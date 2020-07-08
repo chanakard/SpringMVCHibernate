@@ -30,6 +30,9 @@
 <!-- Custom styles for this template -->
 <link href="${css}/shop-homepage.css" rel="stylesheet">
 
+<!-- Custom css -->
+<link href="${css}/myapp.css" rel="stylesheet">
+
 
 </head>
 
@@ -52,6 +55,11 @@
 
 			<c:if test="${userClickContact == true}">
 				<%@include file="contact.jsp"%>
+			</c:if>
+			
+			
+			<c:if test="${userClickAllProducts == true || userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
 			</c:if>
 		</div>
 		<!-- Footer -->
